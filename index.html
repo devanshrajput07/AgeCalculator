@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+  </head>
+  <body>
+    <div id="header">
+      <div class="logo">
+        <a href="/">
+          <img
+            src="//d26tpo4cm8sb6k.cloudfront.net/img/svg/calculator-white.svg"
+            alt="Calculator.net"
+          />
+        </a>
+      </div>
+    </div>
+    <div class="heading">
+      <h2>Age Calculator</h2>
+    </div>
+    <div class="container">
+      <div class="head">
+        <h3>Calculate your Age below</h3>
+      </div>
+      <label for="birthdate">Enter your birthdate:</label>
+      <input type="date" id="birthdate" />
+      <div class="choicebox">
+        <div class="choice">
+          <input
+            type="radio"
+            name="dateOption"
+            id="useToday"
+            checked
+            onchange="toggleCustomDateInput()"
+          />
+          <label for="useToday">Use Today's Date</label>
+        </div>
+        <div class="choice">
+          <input
+            type="radio"
+            name="dateOption"
+            id="useCustomDate"
+            onchange="toggleCustomDateInput()"
+          />
+          <label for="useCustomDate">Use Custom Date</label>
+        </div>
+      </div>
+      <div id="customDateInput" style="display: none">
+        <label for="customDate">Custom Date:</label>
+        <input type="date" id="customDate" />
+      </div>
+      <button onclick="calculateAge()">Calculate Age</button>
+      <div id="result"></div>
+    </div>
+  </body>
+</html>
